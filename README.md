@@ -1,7 +1,7 @@
-# 🧑‍💼 Employee Management System
+#  Employee Management System
 
 A web-based application built using **Django** and **MySQL (via XAMPP)** to efficiently manage employee records. This system allows organizations to perform CRUD operations (Create, Read, Update, Delete) on employee data with a clean and simple interface.
-## 🚀 Features
+##  Features
 
 - ✅ Add new employee records
 - ✏️ Edit employee information
@@ -10,13 +10,13 @@ A web-based application built using **Django** and **MySQL (via XAMPP)** to effi
 - 🧩 MySQL database integration using XAMPP
 - 🧼 Clean and responsive UI (HTML + CSS)
   
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Framework**: Django (Python)
 - **Database**: MySQL (via XAMPP)
 - **Frontend**: HTML, CSS
 - **Web Server**: Django Development Server
 
-## ⚙️ Local Setup Instructions (XAMPP + Django)
+##  Local Setup Instructions (XAMPP + Django)
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/premcodeexplorer/employee-management-system.git
@@ -68,9 +68,9 @@ python manage.py runserver
 ```
 ##Then open your browser and go to:
 
-👉 http://127.0.0.1:8000/
+ http://127.0.0.1:8000/
 
-##📁 Project Structure
+## Project Structure
 employee-management-system/
 ├── emp_management/       # Project-level settings
 ├── employees/            # App with models, views, templates
@@ -78,8 +78,10 @@ employee-management-system/
 ├── requirements.txt      # Python dependencies
 
 
-## 🖼️ Demo Screenshot
+## Demo Screenshot
 
 Here's a preview of the Employee Management System interface:
-![WhatsApp Image 2025-04-10 at 20 50 15](https://github.com/user-attachments/assets/9b0e14b0-9fea-4bdb-9c68-cc1f81b0eebb)
+![image](https://github.com/user-attachments/assets/85c3c6db-b114-4b5c-9e93-9b1fcc96f532)
+![image](https://github.com/user-attachments/assets/0ebf3ba3-d08c-4d14-b2b5-fb146f2fd8b0)
+
 
