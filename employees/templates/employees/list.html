@@ -1,0 +1,62 @@
+{% extends 'employees/base.html' %}
+
+{% block title %}Employee List{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-6">
+        <h2><i class="fas fa-list"></i> Employee Directory</h2>
+    </div>
+    <div class="col-md-6 text-end">
+        <form class="d-flex" method="GET" action="">
+            <input class="form-control me-2" type="search" placeholder="Search employees..." name="q">
+            <button class="btn btn-outline-primary" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th>#</th>
+                <th>Employee</th>
+                <th>Department</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>Hire Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>
+                    <strong>{{ employee.first_name }} {{ employee.last_name }}</strong>
+                    <div class="text-muted small">{{ employee.email }}</div>
+                </td>
+                <td><span class="badge bg-info">{{ employee.department }}</span></td>
+                <td>{{ employee.position }}</td>
+                <td>₹{{ employee.salary }}</td>
+                <td>{{ employee.hire_date|date:"M d, Y" }}</td>
+                <td class="action-btns">
+                    <a href="{% url 'edit_employee' employee.id %}" class="btn btn-sm btn-warning">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="{% url 'delete_employee' employee.id %}" class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7" class="text-center py-4">No employees found. <a href="{% url 'add_employee' %}">Add one now</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
